@@ -10,7 +10,7 @@ fi
 format_file() {
   file="${1}"
   if [ -f $file ]; then
-    clang-format -i ${STYLEARG} ${1}
+    clang-format -style=file -i ${STYLEARG} ${1}
     git add ${1}
   fi
 }
